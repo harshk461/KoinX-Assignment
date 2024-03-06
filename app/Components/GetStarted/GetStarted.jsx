@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function GetStarted() {
     return (
-        <div className='max-w-full w-[400px] flex flex-col justify-center items-center bg-[#0052FE] py-[30px] rounded-lg gap-4'>
+        <div className='max-w-full w-full flex flex-col justify-center items-center bg-[#0052FE] py-[30px] rounded-lg gap-4'>
             <h1 className='text-xl text-white text-center font-semibold '>Get Started KoinX <br /> for FREE</h1>
             <h1 className='text-white text-sm text-center'>With our range of features that you can equip for <br /> free, KoinX allows you to be more educated and <br /> aware of your tex reports</h1>
             <img
