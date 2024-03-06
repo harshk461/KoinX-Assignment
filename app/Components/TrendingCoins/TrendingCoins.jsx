@@ -18,7 +18,7 @@ export default function TrendingCoins() {
 
             trendingCoins.sort((a, b) => b.market_cap - a.market_cap);
             const top3Coins = trendingCoins.slice(0, 3);
-            console.log(top3Coins);
+            // console.log(top3Coins[0].item.data);
             setData(top3Coins);
         } catch (error) {
             console.error("Error fetching trending coins:", error);
@@ -46,9 +46,10 @@ export default function TrendingCoins() {
                             src={item.item.small} alt="eth" />
                         <h1 className='text-md font-semibold'>{item.item.name}</h1>
                     </div>
-                    <div className='px-3 py-1 rounded-lg bg-green-200 flex w-fit text-[15px] items-center gap-2 text-green-700'>
-                        <IoTriangle />
-                        8.21%
+                    <div className={`px-3 py-1 rounded-lg flex w-fit text-[15px] items-center gap-2 text-green-700 
+                    ${item.item.data.price_change_percentage_24h.usd < 0 ? 'bg-red-200 text-red-700' : 'bg-green-200 text-green-700'}`}>
+                        {item.item.data.price_change_percentage_24h.usd < 0 ? <IoTriangle style={{ transform: 'rotate(180deg)' }} /> : <IoTriangle />}
+                        {item.item.data.price_change_percentage_24h.usd.toFixed(2)}%
                     </div>
                 </div>
             ))}

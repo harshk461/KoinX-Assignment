@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div className='w-full p-6 flex flex-col bg-white rounded-lg gap-3'>
+        <div className='w-full p-4 md:p-6 flex flex-col bg-white rounded-lg gap-3'>
             <h1 className='text-2xl font-semibold pb-[10px]'>About Bitcoin</h1>
 
             <div className='w-full flex gap-2 flex-col'>
@@ -35,7 +35,7 @@ export default function About() {
 
             <div className='w-full flex gap-3 flex-col'>
                 <h1>Already Holding Bitcoin?</h1>
-                <div className='w-full flex gap-4 justify-between'>
+                <div className='w-full flex gap-4 justify-between flex-wrap'>
                     <div className='max-w-full flex flex-1 gap-4 p-4 rounded-xl bg-gradient-to-r from-indigo-400 to-cyan-400'>
                         <div className='w-[100px] h-[100px] rounded-md'>
                             <img
@@ -45,7 +45,7 @@ export default function About() {
                         </div>
                         <div className='flex flex-col gap-4'>
                             <h1 className='text-xl font-semibold text-white'>Calculate  your Profits</h1>
-                            <button className='text-md text-black text-center px-6 py-2 rounded-lg flex bg-white items-center gap-2'>Check Now  <ArrowRight /></button>
+                            <button className='w-fit text-md text-black text-center px-6 py-2 rounded-lg flex bg-white items-center gap-2'>Check Now  <ArrowRight /></button>
                         </div>
                     </div>
                     <div className='max-w-full flex flex-1 gap-4 p-4 rounded-xl bg-gradient-to-r from-red-500 to-orange-500'>
@@ -56,8 +56,8 @@ export default function About() {
                                 alt="" />
                         </div>
                         <div className='flex flex-col gap-4'>
-                            <h1 className='text-xl font-semibold text-white'>Calculate  your Profits</h1>
-                            <button className='text-md text-black text-center px-6 py-2 rounded-lg flex bg-white items-center gap-2'>Check Now  <ArrowRight /></button>
+                            <h1 className='text-xl font-semibold text-white'>Calculate your tax liability</h1>
+                            <button className='w-fit text-md text-black text-center px-6 py-2 rounded-lg flex bg-white items-center gap-2'>Check Now  <ArrowRight /></button>
                         </div>
                     </div>
                 </div>
