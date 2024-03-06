@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function TeamMember({ img, user }) {
     return (
-        <div className='w-full flex gap-4 items-center py-3 bg-[#E8F4FD] rounded-md justify-between flex-col md:flex-row p-4 md:p-0'>
+        <div className='w-full flex gap-4 items-center py-3 bg-[#E8F4FD] rounded-md justify-between flex-col md:flex-row p-4 md:px-0'>
             <div className='w-full flex flex-col items-center'>
                 <img
                     className='rounded-md pb-[10px] w-[130px] h-[150px]'

@@ -4,6 +4,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { IoTriangle } from 'react-icons/io5';
 import TradingGraph from '../TradingGraph/TradingGraph';
+import { useParams } from 'next/navigation';
 
 export default function Trading() {
     const [data, setData] = useState([]);
@@ -11,9 +12,9 @@ export default function Trading() {
     const getData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd%2Cinr&include_24hr_change=true")
+            const response = await axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd%2Cinr&include_24hr_change=true&precision=2");
             const d = response.data;
-            setData(d.bitcoin);
+            setData(d.bitcoin)
         }
         catch (e) {
             console.log(e);

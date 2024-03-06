@@ -51,13 +51,13 @@ export default function OtherCoins() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2, 
+                    slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 400,
                 settings: {
-                    slidesToShow: 1, 
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -73,7 +73,6 @@ export default function OtherCoins() {
             const d = response.data.coins;
             // d.sort((a, b) => b.market_cap - a.market_cap);
             const top7 = d.slice(0, 10);
-            console.log(top7);
             setData(top7);
         }
         catch (e) {

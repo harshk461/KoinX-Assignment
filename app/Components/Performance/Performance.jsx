@@ -17,7 +17,7 @@ export default function Performance() {
     const getData = async () => {
         try {
             setloading(true);
-            const response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en&precision=2")
+            const response = await axios.get("http://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en&precision=2")
             const d = response.data;
             console.log(data)
             setData(d);
@@ -67,7 +67,7 @@ export default function Performance() {
 
             <h1 className='text-xl font-semibold pb-[20px] text-gray-600'>Fundamentals</h1>
 
-            <div className='w-full flex gap-[10px] md:gap-[50px] flex-col md:flex-col'>
+            <div className='w-full flex gap-[10px] md:gap-[50px] flex-col md:flex-row'>
                 <div className='flex-1 max-w-full flex flex-col gap-3'>
                     <FundamentalBox
                         title={"Bitcoin Price"}

@@ -12,6 +12,7 @@ import Trading from './Components/Trading/Trading'
 import OtherCoins from './Components/OtherCoins/OtherCoins'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import OptionHeader from './Components/OptionHeader/OptionHeader'
 
 export default function Page() {
   return (
@@ -20,17 +21,18 @@ export default function Page() {
       <div className='w-full pt-[10px'>
         <CurrencyHeader currency={"Bitcon"} />
 
-        <div className='w-full h-full flex gap-3 items-start justify-between md:flex-row flex-col px-[10px] md:px-[150px] pb-[20px]'>
-          <div className='relative w-full md:w-[70%] flex flex-col gap-4'>
+        <div className='w-full h-full flex gap-3 items-start justify-between lg:flex-row flex-col px-[10px] lg:px-[150px] pb-[20px]'>
+          <div className='relative w-full lg:w-[70%] flex flex-col gap-4'>
             <Trading />
+            <OptionHeader />
             <Performance />
             <Sentiment />
             <About />
-            {/* <Tokenomics /> */}
+            <Tokenomics />
             <Team />
           </div>
 
-          <div className='w-full flex flex-col gap-4 md:w-[30%]'>
+          <div className='w-full flex flex-col gap-4 lg:w-[30%]'>
             <GetStarted />
             <TrendingCoins />
           </div>

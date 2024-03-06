@@ -2,15 +2,19 @@
 
 import React from 'react'
 import {
-    PieChart,
     Pie,
     Legend,
     Cell,
     ResponsiveContainer,
     Label
 } from "recharts";
+import dynamic from "next/dynamic";
 
 export default function Tokenomics() {
+    const PieChart = dynamic(() => (
+        import("recharts").then(recharts => recharts.PieChart)
+    ), { ssr: false });
+
     const data = [
         { name: "Foundation", value: 20 },
         { name: "Crowdsale Investor", value: 80 },
